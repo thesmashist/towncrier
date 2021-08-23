@@ -1,0 +1,25 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "An event log discord bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thesmashist/towncrier.git"
+  },
+  "keywords": [
+    "discord"
+  ],
+  "author": "Dilan Horana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thesmashist/towncrier/issues"
+  },
+  "homepage": "https://github.com/thesmashist/towncrier#readme",
+  "dependencies": {
+    "discord.js": "^13.1.0"
+  }
+}
