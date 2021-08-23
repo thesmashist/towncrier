@@ -4,7 +4,7 @@ const { Client, Intents } = require('discord.js');
 const bot = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 const { token }  = require('./config.json');
 
-const PREFIX = "-";
+
 
 bot.once('ready', () => {
     console.log("Town Crier is online!");
