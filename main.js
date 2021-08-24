@@ -1,14 +1,17 @@
 // Require
-const Discord = require('discord.js');
+require('dotenv').config();
+const TOKEN = process.env.TOKEN;
 
-const bot = new Discord.Client({ intents: [Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MESSAGES] });
-const { token }  = require('./config.json');
+// Required
+const { Client, Intents, Collection } = require('discord.js');
+
+// Initialize bot
+const bot = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
 const prefix = '-';
-
 const fs = require('fs');
 
-bot.commands = new Discord.Collection();
+bot.commands = new Collection();
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles) {
@@ -33,4 +36,4 @@ bot.on("message", message => {
 });
 
 
-bot.login(token);
+bot.login(TOKEN);
